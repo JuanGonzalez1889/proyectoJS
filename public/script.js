@@ -26,3 +26,4 @@ function updateTime() {
 }
 
 setInterval(updateTime, 1000);
+
