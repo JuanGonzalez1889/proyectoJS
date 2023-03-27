@@ -183,7 +183,7 @@ header {
 /*footer*/
 .container {
     position: absolute;
-    top: 350%;
+    top: 413%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
@@ -286,10 +286,10 @@ header {
 .footer-container {
         display: flex;
             flex-direction: row;
-            /* width: 111%; */
-            height: 429px;
+            /* width: 105%; */
+            height: 247px;
             background-color: beige;
-            margin-top: -98px;
+            margin-top: -100px;
             justify-content: flex-start;
             align-content: space-around;
             flex-wrap: wrap;
@@ -324,6 +324,30 @@ header {
 .column h5 {
     font-size: 14px;
     font-weight: bold;
+}
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 25%;
+    max-width: 300px;
+    margin: 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+    /* aumenta el tamaño de la imagen en un 10% */
+}
+@media only screen and (max-width: 768px) {
+    .image-container img {
+        width: 50%;
+    }
 }
 /* Estilos para la lista de productos */
 .products-list {
@@ -455,4 +479,40 @@ header {
     .gallery-item:hover{
         flex-basis: 100%;
     }
+}
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: #f7f7f7;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+    background-color: #555;
 }
