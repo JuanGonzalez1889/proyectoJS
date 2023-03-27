@@ -15,4 +15,7 @@ app.get("/", (req, res) => {
 app.get("/product", (req, res) => {
   res.sendFile(path.join(__dirname, "views/product.html"));
 });
-
+app.post('/', (req, res) => {
+  console.log(req.body);
+  res.send('¡Consulta enviada con éxito!');
+});

@@ -99,25 +99,35 @@
   </div>
 </section>
 <section>
-  <form>
-  <div>
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre">
-  </div>
-  <div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-  </div>
-  <div>
-    <label for="consulta">Consulta:</label>
-    <textarea id="consulta" name="consulta"></textarea>
-  </div>
-  <div class="buttons">
-    <button type="submit">Enviar</button>
-    <button type="reset">Cancelar</button>
-  </div>
-</form>
+  <form class="form">
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div>
+      <label for="consulta">Consulta:</label>
+      <textarea id="consulta" name="consulta"></textarea>
+    </div>
+    <div class="button">
+      <button type="button" id="openPopup">Enviar</button>
+      <button type="reset">Cancelar</button>
+    </div>
+    <div class="popup">
+      <div class="popup-content">
+        <img src="/public/images/check.png">
+        <h2>Muchas gracias!</h2>
+        <p>Su consulta fue enviada con éxito!</p>
+        <button type="button" id="closePopup">OK</button>
+      </div>
+    </div>
+  </form>
+  <script src="/public/popup.js"></script>
 </section>
+
 </body>
 <footer>
     <div class="container">
@@ -137,6 +147,7 @@
             <i class="fab fa-youtube"></i>
         </a>
     </div>
+    
 </footer>
 
 </html>
