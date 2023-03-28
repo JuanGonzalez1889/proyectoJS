@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/JuanGonzalez1889/proyectoJS#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.1",
+    "request": "^2.88.2"
   }
 }

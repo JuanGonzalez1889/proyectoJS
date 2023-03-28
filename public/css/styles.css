@@ -118,6 +118,19 @@ header {
         flex-direction: column;
         height: 164px
     }
+        .footer-container {
+            display: flex;
+            /* width: 105%; */
+            height: 1000px;
+            max-height: 52%;
+            background-color: beige;
+            margin-top: -100px;
+            margin-left: -43px;
+            margin-right: -44px;
+            margin-bottom: -88px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
 
     .logo {
         margin-bottom: 20px;
@@ -286,18 +299,17 @@ position: relative;
             background-color: black;
         }
 .footer-container {
-        display: flex;
-            flex-direction: row;
-            /* width: 105%; */
-            height: 247px;
-            background-color: beige;
-            margin-top: -100px;
-            justify-content: flex-start;
-            align-content: space-around;
-            flex-wrap: wrap;
-            margin-left: -43px;
-            margin-right: -44px;
-            margin-bottom: -88px;
+ display: flex;
+    flex-direction: row;
+    /* width: 105%; */
+    height: 247px;
+    background-color: beige;
+    margin-top: -100px;
+    flex-wrap: nowrap;
+    margin-left: -43px;
+    margin-right: -44px;
+    margin-bottom: -88px;
+    justify-content: flex-start;
 }
 
 .column {
@@ -498,7 +510,15 @@ textarea {
     border-bottom: 1px solid #ddd;
     background-color: #f7f7f7;
 }
-
+.button #sendButton{
+    background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+}
 button[type="button"],
 button[type="reset"] {
     background-color: #333;
@@ -517,60 +537,13 @@ button[type="reset"]:hover {
 .form{
 box-shadow: 0 0 10px 5px rgb(0 0 0 / 30%);
     padding: 46px;
-    /* margin-left: 25%; */
     display: flex;
-    /* margin-right: 15%; */
     position: relative;
-    /* padding-left: 69px; */
     width: 50%;
     margin-top: 41px;
     flex-direction: column;
 }
-/*
-.popup{
-    width: 400px;
-    background: #fff;
-    border-radius: 6px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(0.1);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-    visibility: hidden;
-    transition: transform 0.4s, top 0.4s;
-}
-.openPopup{
-    visibility: visible;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-}
-.popup img{
-    width: 100px;
-    margin-top: -50px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgb(0, 0, 0.2) ;
-}
-.popup h2{
-    font-size: 38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-}
-.popup button{
-    width: 100%;
-    margin-top: 50px;
-    padding: 10px 0;
-    background: #6fd649;
-    color: #fff;
-    border: 0;
-    outline: none;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow: 0 5px 5px rgb(0, 0, 0.2);
 
-}*/
 .popup {
     position: fixed;
     top: 0;
@@ -629,4 +602,8 @@ box-shadow: 0 0 10px 5px rgb(0 0 0 / 30%);
 
 .popup button:hover {
     background-color: #286090;
+}
+.error {
+  display: none;
+  color: red;
 }
