@@ -1,18 +1,40 @@
+/* ======================== */
+/* 
+    Ignore the following styles. They are not important to achieve the effect.
+    I'm only using them for looks (overall page background/font styles/centering content).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ======================== */
 body {
     background-color: lightslategrey;
 
 
-}header {
+}
+header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    height: 82px;
-    background-color: beige;
-    /* color: #fff; */
-    /* margin-top: 2px; */
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px;
+        height: 110px;
+        background-color: beige;
 
 }
+
+
 
 .logo img {
     height: 100px;
@@ -116,6 +138,20 @@ a:nth-child(5):hover~.animation {
         height: 164px
     }
 
+    .footer-container {
+        display: flex;
+        /* width: 105%; */
+        height: 1000px;
+        max-height: 52%;
+        background-color: beige;
+        margin-top: -100px;
+        margin-left: -43px;
+        margin-right: -44px;
+        margin-bottom: -88px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .logo {
         margin-bottom: 20px;
     }
@@ -149,15 +185,15 @@ a:nth-child(5):hover~.animation {
     }
 }
 /*section imagenes*/
-
 .container {
     max-width: 960px;
     margin-inline: auto;
-    padding: 100px 15px;
+    padding: 57px 15px;
 }
 
 .title {
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .title span {
@@ -237,7 +273,7 @@ a:nth-child(5):hover~.animation {
 .role {
     opacity: 0;
     transition: opacity 0.25s, transform 0.3s;
-    transition-delay: .35s;
+    transition-delay: 0.35s;
 }
 
 .gallery-item:hover .name,
@@ -260,4 +296,267 @@ a:nth-child(5):hover~.animation {
     .gallery-item:hover {
         flex-basis: 100%;
     }
+}
+
+/*////////////////////////*
+/* titulos con efecto*/
+.title-efect{
+    
+        font-size: 53px;
+        text-align: center;
+}
+.title-efect span {
+    --total: calc(var(--duration) + var(--delay));
+    position: relative;
+    display: block;
+    color: transparent;
+    overflow: hidden;
+    animation: reveal 1s var(--total) forwards;
+}
+
+.title-efect span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: #0561ee;
+    animation: rollIn var(--duration) var(--delay) forwards,
+        rollOut var(--duration) var(--total) forwards;
+}
+
+.title-efect span:nth-child(2)::after {
+    border-top: 3px solid #004ab8;
+}
+
+@keyframes reveal {
+    to {
+        color: #fff;
+    }
+}
+
+@keyframes rollIn {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes rollOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(105%);
+    }
+}
+
+
+/*articulos*/
+.card {
+    background-color: #fff;
+    box-shadow: 2px .8rem 1rem rgba(0, 0, 0, .025);
+}
+
+.card__publication {
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.card__publication img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s;
+}
+
+.card:hover .card__publication img {
+    transform: scale(1.5);
+}
+
+.card__publication>div {
+    
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+}
+
+.card__publication i {
+    margin-right: 1rem;
+}
+
+.card__publication span {
+    display: block;
+}
+
+.card__author {
+    margin-bottom: .5rem;
+}
+
+.card__info {
+    position: relative;
+    padding: 2rem 3rem;
+}
+
+.card__title {
+    font-size: 3rem;
+}
+
+.card__subtitle {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #a2a2a2;
+    margin-bottom: 1rem;
+}
+
+.card__cta {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff7730;
+    margin-top: 2rem;
+}
+
+.card__cta span {
+    display: inherit;
+    transition: transform .5s;
+}
+
+.card__cta:hover span {
+    transform: translateX(.5rem);
+}
+
+@media screen and (min-width: 37.5em) {
+    .card {
+        width: 96%;
+            /* margin-right: 40px; */
+            display: grid;
+            grid-auto-flow: column;
+            /* max-width: 75rem; */
+            margin-left: 28px;
+            margin-bottom: 11px;
+            box-shadow: 0 0 25px 6px rgb(0 0 0 / 39%);
+    }
+
+    .card__publication {
+            width: 12rem;
+                height: initial;
+    }
+}
+
+/*footer*/
+.container-footer {
+    position: relative;
+    bottom: -100px;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    margin-bottom: -27px;
+}
+
+.container-footer .btn {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: #fff;
+    box-shadow: 0 5px 15px -5px #aaa;
+    margin: 10px;
+    border-radius: 30%;
+    overflow: hidden;
+    position: relative;
+    color: #42d2ff;
+}
+
+.container-footer .btn i {
+    position: relative;
+    z-index: 4;
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.3s ease-in-out;
+}
+
+.container-footer .btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(#00c6ff, #0072ff);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.container-footer .btn:hover {
+    color: #fff;
+    transform: scale(1.3);
+}
+
+.container-footer .btn:hover::before {
+    animation: onHover 0.7s 1;
+    left: -10%;
+    top: -10%;
+}
+
+@keyframes onHover {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
+
+.button-container {
+    position: relative;
+    width: 200px;
+    height: 50px;
+}
+
+#my-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.button-pdf{
+    background-color: #b0d0ff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 63px;
+        cursor: nesw-resize;
+        margin-left: 45%;
+       
+
+}
+.button-pdf a{
+text-decoration: none;
+color: #001ad5;
 }
