@@ -611,3 +611,37 @@ box-shadow: 0 0 10px 5px rgb(0 0 0 / 30%);
   display: none;
   color: red;
 }
+
+/*contacto*/
+.img-contacto{
+    display: flex;
+    flex-direction: column;
+}
+.text-imgcontacto{
+font-family: "Playfair Display";
+color: rgb(213, 155, 0);
+    display: flex;
+    margin-left: 69%;
+    height: 16%;
+    background: white;
+    position: absolute;
+    justify-content: flex-end;
+    bottom: 444px;
+    font-family: "Playfair Display";
+    font-size: 45px;
+}
+.button-wsp{
+    background-color: rgb(213, 155, 0);
+        color: #fff;
+        padding: 16px 78px;
+        border: none;
+        border-radius: 70px;
+        cursor: nesw-resize;
+        /* margin-left: 45%; */
+        /* top: 10px; */
+        position: absolute;
+        top: 315px;
+        left: -3px;
+        font-size: 26px;
+        
+}
