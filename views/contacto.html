@@ -36,6 +36,10 @@
 
 
 <body>
+    <div id="contenedor_carga">
+        <div id="carga"></div>
+    </div>
+
 <div class="img-contacto">
     <img src="/public/images/Productos/mieldetandil.png" alt="#">
 </div>
@@ -45,6 +49,13 @@
 </div>
 
 
+<script>
+    window.onload = function () {
+        let contenedor = document.getElementById("contenedor_carga");
+        contenedor.style.visibility = "hidden";
+        contenedor.style.opacity = "0";
+    }
+</script>
 </body>
 
 

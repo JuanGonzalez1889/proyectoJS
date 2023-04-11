@@ -33,6 +33,9 @@
   </button>
 </header>
 <body>
+  <div id="contenedor_carga">
+    <div id="carga"></div>
+  </div>
   <section>
     <h1 class="title-efect" style="--duration: 1s ">
       <span style="--delay: 0.5s">JS Distribuidora</span>
@@ -262,6 +265,13 @@
 
 
   <button class="button-pdf"><a href="/public/images/CATÁLOGO.pdf" download>Descargar Catalogo</a></button>
+  <script>
+    window.onload = function () {
+      let contenedor = document.getElementById("contenedor_carga");
+      contenedor.style.visibility = "hidden";
+      contenedor.style.opacity = "0";
+    }
+  </script>
 </body>
 <footer>
   <div class="container-footer">
