@@ -574,8 +574,8 @@ color: #001ad5;
 }
 
 #carga {
-    border: 15px solid #ccc;
-    border-top-color: #f4266a;
+    border: 15px solid beige;
+    border-top-color: rgb(213, 155, 0);
     border-top-style: groove;
     height: 100px;
     width: 100px;

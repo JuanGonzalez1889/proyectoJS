@@ -13,7 +13,7 @@ function openPopup() {
 //  let contenedor = document.getElementById("contenedor_carga");
 //  contenedor.style.visibility = "visible";
 //  contenedor.style.opacity = "1";
-//}
+//  }
 function closePopup() {
   let contenedorCarga = document.getElementById("contenedor_carga");
   popup.style.display = "none";
@@ -35,9 +35,5 @@ form.addEventListener("submit", function (event) {
 });
 
 okButton.addEventListener("click", closePopup)
-window.onload = function () {
-  let contenedor = document.getElementById("contenedor_carga");
-  contenedor.style.visibility = "hidden";
-  contenedor.style.opacity = "0";
-};
+
 

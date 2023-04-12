@@ -45,8 +45,41 @@
 </div>
 <div class="text-imgcontacto">
     <h3>Exportación de miel Honey export</h3>
-    <button class="button-wsp"><a href="https://wa.me/+5493413365209?text= Hola! Me comunico por el producto de JsDistribuidora...Me podrían dar mas informacion?!gracias">WhatsApp</button>
+    <button class="button-wsp">WhatsApp</button>
 </div>
+
+<form class="form" action="https://formspree.io/f/xdovpdvr"
+  method="POST">
+  <div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <p id="nombre-error" class="error" style="display:none;"></p>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <p id="email-error" class="error" style="display:none;"></p>
+  </div>
+  <div>
+    <label for="consulta">Consulta:</label>
+    <textarea id="consulta" name="consulta"></textarea>
+    <p id="consulta-error" class="error" style="display:none;"></p>
+  </div>
+  <div class="button">
+    <button type="submit" id="sendButton">Enviar</button>
+    <button type="reset">Cancelar</button>
+  </div>
+  <div class="popup">
+    <div class="popup-content">
+      <img src="/public/images/check.png">
+      <h2>Muchas gracias!</h2>
+      <p>Su consulta fue enviada con éxito!</p>
+      
+      <button type="button" id="okButton">OK</button>
+      
+    </div>
+  </div>
+</form>
 
 
 <script>
